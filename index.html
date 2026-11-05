@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chitral Sources</title>
+<meta name="description" content="A guide to historical sources on Chitral: what exists, where it is kept, and how to read it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f2ea; --paper:#fffdf8; --ink:#1f1c18; --muted:#6b645a; --line:#e3dccf;
+  --accent:#8a2e1f; --accent-soft:#f3e3dc; --teal:#215c5c; --teal-soft:#dfecea;
+  --note:#f8f1e1; --note-line:#d9b874;
+  --shadow:0 1px 2px rgba(40,30,20,.06),0 4px 14px rgba(40,30,20,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#161411; --paper:#1f1c18; --ink:#ece6da; --muted:#a39a8c; --line:#38322a;
+    --accent:#e08a6f; --accent-soft:#3a2520; --teal:#7cc1bb; --teal-soft:#1d3331;
+    --note:#2a241b; --note-line:#8a6d34; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#161411; --paper:#1f1c18; --ink:#ece6da; --muted:#a39a8c; --line:#38322a;
+  --accent:#e08a6f; --accent-soft:#3a2520; --teal:#7cc1bb; --teal-soft:#1d3331;
+  --note:#2a241b; --note-line:#8a6d34; --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--teal)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line);background:var(--paper)}
+.masthead{padding-top:44px;padding-bottom:32px}
+.eyebrow{font:500 12px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font:700 clamp(34px,6vw,52px)/1.05 "Source Serif 4",Georgia,serif;margin:0 0 12px;letter-spacing:-.01em}
+.tagline{font:400 clamp(17px,2.4vw,20px)/1.5 "Source Serif 4",Georgia,serif;color:var(--muted);margin:0;max-width:640px}
+nav.top{display:flex;gap:18px;margin-top:22px;font-size:14px}
+nav.top a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+nav.top a:hover{border-color:var(--accent)}
+
+.controls{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:14px 0}
+.search{width:100%;font:16px Inter,sans-serif;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+.search:focus,select:focus{outline:2px solid var(--teal);outline-offset:1px}
+.filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+select{width:100%;font:14px Inter,sans-serif;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+.meta-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0 8px;color:var(--muted);font-size:14px}
+.clear{background:none;border:0;color:var(--accent);font:500 14px Inter,sans-serif;cursor:pointer;padding:0}
+.active-tag{display:inline-flex;align-items:center;gap:6px;background:var(--accent-soft);color:var(--accent);border-radius:99px;padding:2px 10px;font-size:13px;margin-left:6px}
+
+.list{display:flex;flex-direction:column;gap:14px;padding-bottom:40px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:var(--shadow)}
+.card-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px;font-size:13px}
+.date{font:600 14px "IBM Plex Mono",monospace;color:var(--accent)}
+.badge{border-radius:99px;padding:2px 10px;font-size:12px;font-weight:500}
+.b-type{background:var(--teal-soft);color:var(--teal)}
+.b-access{border:1px solid var(--line);color:var(--muted)}
+.b-access.digital{border-color:var(--teal);color:var(--teal)}
+.card h2{font:600 21px/1.3 "Source Serif 4",Georgia,serif;margin:0 0 10px}
+.where{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--muted);margin-bottom:12px}
+.ref{font:500 13px "IBM Plex Mono",monospace;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 7px;cursor:pointer}
+.ref:hover{border-color:var(--teal)}
+.ref.copied::after{content:" copied";color:var(--teal)}
+.contents{margin:0 0 12px}
+.note{background:var(--note);border-left:3px solid var(--note-line);border-radius:0 8px 8px 0;padding:10px 14px;margin:0 0 12px;font:400 15.5px/1.55 "Source Serif 4",Georgia,serif}
+.note b{font:600 11px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+.card-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:none;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:2px 10px;font:13px Inter,sans-serif;cursor:pointer}
+.tag:hover{border-color:var(--accent);color:var(--accent)}
+.open{font-size:14px;font-weight:500;text-decoration:none}
+.open:hover{text-decoration:underline}
+.empty{padding:40px 0;text-align:center;color:var(--muted)}
+
+section.about{border-top:1px solid var(--line);padding:36px 0 20px}
+section.about h2{font:600 26px "Source Serif 4",Georgia,serif;margin:0 0 12px}
+section.about p{max-width:680px;margin:0 0 14px}
+footer{padding:20px 0 40px;color:var(--muted);font-size:13px}
+
+@media (max-width:720px){
+  .filters{grid-template-columns:1fr 1fr}
+  .masthead{padding-top:32px;padding-bottom:24px}
+  .card{padding:16px}
+  .card h2{font-size:19px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap masthead">
+    <p class="eyebrow">A research directory</p>
+    <h1 id="site-title">Chitral Sources</h1>
+    <p class="tagline" id="site-tagline"></p>
+    <nav class="top"><a href="#directory">Directory</a><a href="#about">About</a></nav>
+  </div>
+</header>
+
+<div class="controls" id="directory">
+  <div class="wrap">
+    <input class="search" id="q" type="search" placeholder="Search titles, references, notes, tags…" aria-label="Search sources">
+    <div class="filters">
+      <select id="f-archive" aria-label="Archive"><option value="">All archives</option></select>
+      <select id="f-type" aria-label="Type"><option value="">All types</option></select>
+      <select id="f-access" aria-label="Access"><option value="">Any access</option></select>
+      <select id="f-sort" aria-label="Sort">
+        <option value="old">Oldest first</option>
+        <option value="new">Newest first</option>
+        <option value="title">Title A–Z</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="meta-row">
+    <span id="count">Loading…</span>
+    <button class="clear" id="clear" hidden>Clear filters</button>
+  </div>
+  <div class="list" id="list"></div>
+
+  <section class="about" id="about">
+    <h2>About this directory</h2>
+    <div id="about-text"></div>
+  </section>
+</main>
+<footer class="wrap" id="footer"></footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let all = [], activeTag = "";
+
+function fillSelect(el, values){
+  [...new Set(values.filter(Boolean))].sort().forEach(v => {
+    const o = document.createElement("option"); o.value = v; o.textContent = v; el.appendChild(o);
+  });
+}
+function dateLabel(s){
+  return s.date_to && s.date_to !== s.date_from ? `${esc(s.date_from)}–${esc(s.date_to)}` : esc(s.date_from);
+}
+function card(s){
+  const digital = s.access === "Digitised online";
+  const tags = (s.tags || []).map(t => `<button class="tag" data-tag="${esc(t)}">${esc(t)}</button>`).join("");
+  return `<article class="card">
+    <div class="card-top">
+      <span class="date">${dateLabel(s)}</span>
+      ${s.type ? `<span class="badge b-type">${esc(s.type)}</span>` : ""}
+      ${s.access ? `<span class="badge b-access ${digital ? "digital" : ""}">${esc(s.access)}</span>` : ""}
+    </div>
+    <h2>${esc(s.title)}</h2>
+    <div class="where">
+      <span>${esc(s.archive)}</span>
+      ${s.reference ? `<span class="ref" title="Click to copy" data-ref="${esc(s.reference)}">${esc(s.reference)}</span>` : ""}
+      ${s.language ? `<span>${esc(s.language)}</span>` : ""}
+    </div>
+    <p class="contents">${esc(s.contents)}</p>
+    ${s.note ? `<div class="note"><b>How to read it</b>${esc(s.note)}</div>` : ""}
+    <div class="card-foot">
+      <div class="tags">${tags}</div>
+      ${s.link ? `<a class="open" href="${esc(s.link)}" target="_blank" rel="noopener">${digital ? "Read online" : "View catalogue entry"} ↗</a>` : ""}
+    </div>
+  </article>`;
+}
+function render(){
+  const q = $("#q").value.trim().toLowerCase();
+  const fa = $("#f-archive").value, ft = $("#f-type").value, fx = $("#f-access").value, sort = $("#f-sort").value;
+  let r = all.filter(s => {
+    if (fa && s.archive !== fa) return false;
+    if (ft && s.type !== ft) return false;
+    if (fx && s.access !== fx) return false;
+    if (activeTag && !(s.tags || []).includes(activeTag)) return false;
+    if (!q) return true;
+    return [s.title, s.reference, s.archive, s.contents, s.note, s.language, s.type, (s.tags||[]).join(" "), s.date_from, s.date_to]
+      .join(" ").toLowerCase().includes(q);
+  });
+  const yr = s => parseInt(s.date_from) || 0;
+  r.sort(sort === "title" ? (a,b) => a.title.localeCompare(b.title) : sort === "new" ? (a,b) => yr(b) - yr(a) : (a,b) => yr(a) - yr(b));
+  $("#list").innerHTML = r.length ? r.map(card).join("") : `<p class="empty">No sources match this search.</p>`;
+  const filtered = q || fa || ft || fx || activeTag;
+  $("#count").innerHTML = `${r.length} of ${all.length} sources` + (activeTag ? `<span class="active-tag">${esc(activeTag)}</span>` : "");
+  $("#clear").hidden = !filtered;
+}
+document.addEventListener("click", e => {
+  const t = e.target.closest(".tag");
+  if (t){ activeTag = t.dataset.tag; render(); $("#directory").scrollIntoView({behavior:"smooth"}); return; }
+  const ref = e.target.closest(".ref");
+  if (ref){
+    try { navigator.clipboard.writeText(ref.dataset.ref); ref.classList.add("copied"); setTimeout(() => ref.classList.remove("copied"), 1400); } catch(_){}
+  }
+});
+["#q","#f-archive","#f-type","#f-access","#f-sort"].forEach(id => $(id).addEventListener("input", render));
+$("#clear").addEventListener("click", () => {
+  $("#q").value = ""; ["#f-archive","#f-type","#f-access"].forEach(id => $(id).value = ""); activeTag = ""; render();
+});
+
+Promise.all([
+  fetch("data/sources.json", {cache:"no-store"}).then(r => r.json()),
+  fetch("data/site.json", {cache:"no-store"}).then(r => r.json()).catch(() => ({}))
+]).then(([d, site]) => {
+  all = d.sources || [];
+  if (site.title){ $("#site-title").textContent = site.title; document.title = site.title; }
+  if (site.tagline) $("#site-tagline").textContent = site.tagline;
+  $("#about-text").innerHTML = (site.about || "").split(/\n\s*\n/).map(p => `<p>${esc(p)}</p>`).join("");
+  $("#footer").innerHTML = `${esc(site.title || "Chitral Sources")}${site.contact ? ` · Suggestions and corrections: <a href="mailto:${esc(site.contact)}">${esc(site.contact)}</a>` : ""}`;
+  fillSelect($("#f-archive"), all.map(s => s.archive));
+  fillSelect($("#f-type"), all.map(s => s.type));
+  fillSelect($("#f-access"), all.map(s => s.access));
+  render();
+}).catch(() => {
+  $("#count").textContent = "";
+  $("#list").innerHTML = `<p class="empty">The source list could not be loaded.</p>`;
+});
+</script>
+</body>
+</html>

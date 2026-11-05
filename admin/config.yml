@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: muniruddin0099-dot/chitral-sources
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "directory"
+    label: "Directory"
+    editor:
+      preview: false
+    files:
+      - name: "sources"
+        label: "Sources"
+        file: "data/sources.json"
+        format: "json"
+        fields:
+          - label: "Sources"
+            name: "sources"
+            widget: "list"
+            label_singular: "source"
+            summary: "{{fields.title}} ({{fields.date_from}})"
+            add_to_top: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date from (year)", name: "date_from", widget: "string" }
+              - { label: "Date to (year)", name: "date_to", widget: "string", required: false }
+              - { label: "Type", name: "type", widget: "select", options: ["File", "File series", "Report", "Letter", "Memorandum", "Diary", "Map", "Photograph", "Book", "Gazetteer", "Other"] }
+              - { label: "Archive or library", name: "archive", widget: "string" }
+              - { label: "Reference number", name: "reference", widget: "string", required: false }
+              - { label: "Language", name: "language", widget: "string", default: "English" }
+              - { label: "Access", name: "access", widget: "select", options: ["Catalogue only", "Digitised online", "Published", "Restricted"] }
+              - { label: "Link", name: "link", widget: "string", required: false }
+              - { label: "What it contains", name: "contents", widget: "text" }
+              - { label: "How to read it (your note)", name: "note", widget: "text", required: false }
+              - { label: "Tags", name: "tags", widget: "list", required: false }
+      - name: "site"
+        label: "Site settings"
+        file: "data/site.json"
+        format: "json"
+        fields:
+          - { label: "Site title", name: "title", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "About", name: "about", widget: "text" }
+          - { label: "Contact email", name: "contact", widget: "string" }
