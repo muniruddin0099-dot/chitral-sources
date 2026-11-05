@@ -1,18 +1,21 @@
 {
   "sources": [
     {
-      "title": "Chitral Memoranda & Correspondence, 1895",
-      "date_from": "1877",
-      "date_to": "1895",
-      "type": "Memorandum",
       "archive": "British Library, India Office Records",
-      "reference": "IOR/L/PS/20/MEMO19",
-      "language": "English",
       "access": "Catalogue only",
-      "link": "https://searcharchives.bl.uk/catalog/040-000566253",
+      "reference": "IOR/L/PS/20/MEMO19",
+      "date_to": "1895",
+      "note": "This document is important to understand the history of the Great Game\n",
+      "title": "Chitral Memoranda & Correspondence, 1895",
+      "language": "English",
+      "tags": [
+        "1895 siege",
+        "Mehtar"
+      ],
       "contents": "Confidential memoranda and letters by senior British officials on policy towards Chitral and the Chitral Relief Force.",
-      "note": "Write your own note here on how to read this source.",
-      "tags": ["1895 siege", "Mehtar"]
+      "type": "Memorandum",
+      "link": "https://searcharchives.bl.uk/catalog/040-000566253",
+      "date_from": "1877"
     }
   ]
 }
